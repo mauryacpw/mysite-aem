@@ -1,0 +1,11 @@
+{
+  "article": {
+    "image": "/content/dam/test.png",
+    "title": "Test Title",
+    "description": "Test Description"
+  },
+  "pathTest": {
+    "inputPath": "/content/article-path",
+    "expectedPath": "/content/article-path.html"
+  }
+}

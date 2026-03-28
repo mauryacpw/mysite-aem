@@ -1,0 +1,26 @@
+<sly data-sly-use.articleModel="com.mysite.core.models.ArticleCardModel"/>
+
+<div data-sly-test="${articleModel.articleDetails.size == 0}">
+    <p>No articles available.</p>
+</div>
+
+<div class="articles-container" data-sly-list.article="${articleModel.articleDetails}">
+
+    <div class="article-card">
+
+        <img src="${article.articleImage}" alt="${article.articleTitle}" />
+
+        <h2>${article.articleTitle}</h2>
+
+        <p>${article.articleDescription @context = "html"}</p>
+
+        <p class="article-date"><span class="date-label">Published on:  ${'yyyy-MM-dd' @ format=article.articleDate}</span>
+        </p>
+
+        <a href="${article.articlePath}" class="read-more">
+            Read More
+        </a>
+
+    </div>
+
+</div>

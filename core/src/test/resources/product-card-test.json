@@ -1,0 +1,20 @@
+{
+  "product": {
+    "title": "Test Product",
+    "price": 100,
+    "image": "/content/dam/image.png",
+    "color": "Red",
+    "tags": ["tag1", "tag2"]
+  },
+  "futureProduct": {
+    "title": "Future Product",
+    "daysToAdd": 2
+  },
+  "setter": {
+    "title": "Setter Product",
+    "price": 200,
+    "image": "/img.png",
+    "color": "Blue",
+    "tags": ["a", "b"]
+  }
+}

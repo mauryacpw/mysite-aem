@@ -1,0 +1,24 @@
+<sly data-sly-template.educationDetails>
+
+    <div class="educational-details">
+
+        <h3>Educational Details</h3>
+
+        <p><strong>College Name:</strong> ${properties.collegeName}</p>
+        <p><strong>Percentage:</strong> ${properties.percentage}</p>
+        <p><strong>Passed Out Date:</strong>${'yyyy-MM-dd' @ format=properties.passedOutDate}</p>
+
+        <sly data-sly-test="${properties.backlog == 'true'}">
+            <p><strong>Backlogs:</strong> Yes</p>
+            <p><strong>Number of Backlogs:</strong> ${properties.numberOfBacklogs}</p>
+        </sly>
+
+        <sly data-sly-test="${properties.backlog != 'true'}">
+            <p><strong>Backlogs:</strong> No</p>
+        </sly>
+
+    </div>
+
+</sly>
+
+<sly data-sly-call="${educationDetails}" />

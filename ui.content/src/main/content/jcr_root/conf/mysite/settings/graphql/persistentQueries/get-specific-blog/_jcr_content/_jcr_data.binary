@@ -1,0 +1,25 @@
+query GetBlogByTitle($title: String) {
+  blogModelList(filter: { title: {  _expressions:[{
+    value: $title
+  }]} }) {
+    items {
+      title
+      description { 
+         plaintext 
+      }
+      publishDate
+      featuredImage { 
+       __typename 
+      }
+      author {
+        authorName
+        authorBio { 
+          plaintext 
+         }
+        authorImage { 
+         __typename
+ }
+      }
+    }
+  }
+}

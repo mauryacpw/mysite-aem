@@ -1,0 +1,33 @@
+<div class="global-header">
+
+    <div class="nav-left">
+        <div class="logo"
+             data-sly-resource="${'logo' @ resourceType='core/wcm/components/image/v3/image'}"></div>
+    </div>
+
+    <div class="nav-wrapper">
+        <div data-sly-resource="${'navigation' @ resourceType='core/wcm/components/navigation/v2/navigation'}"></div>
+    </div>
+
+    <button class="hamburger" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+
+    <div class="nav-right">
+        <div class="login-btn">
+            <div data-sly-resource="${'login-button' @ resourceType='core/wcm/components/button/v2/button'}"></div>
+        </div>
+    </div>
+
+</div>
+
+<div class="outer-container">
+    <div class="login-box">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+            <p id="message"></p>
+        </form>
+    </div>
+</div>
+

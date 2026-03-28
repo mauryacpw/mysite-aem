@@ -1,0 +1,20 @@
+{
+  "basicProperties": {
+    "title": "Test Title",
+    "description": "Test Description",
+    "status": true,
+    "category": "Electronics",
+    "showCF": false,
+    "exportedType": "mysite/components/custom-components/product-details-sling-model"
+  },
+  "contentFragments": {
+    "cf1": {
+      "path": "/content/dam/cf1",
+      "productTitle": "CF Product 1"
+    },
+    "cf2": {
+      "path": "/content/dam/cf2",
+      "productTitle": "CF Product 2"
+    }
+  }
+}

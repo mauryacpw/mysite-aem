@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-02-24T13:05:13.767+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/mysite/settings/wcm/templates/page-content"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Task 2"
+        sling:resourceType="mysite/components/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="mysite/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="mysite/components/container"
+                layout="responsiveGrid">
+                <title
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="mysite/components/title"/>
+                <container
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="mysite/components/container"
+                    layout="responsiveGrid">
+                    <dynamic_two_tabs
+                        jcr:created="{Date}2026-02-23T14:46:42.074+05:30"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2026-02-24T13:05:13.757+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="mysite/components/dynamic-two-tabs"
+                        address="&lt;p>address rich text test&lt;/p>&#xd;&#xa;"
+                        age="23"
+                        category="Kids"
+                        collegeName="College name, hyderabad"
+                        contactMode="email"
+                        detailsType="educationalDetails"
+                        dob="{Date}2026-02-03T00:00:00.000+05:30"
+                        email="kollamanoj95@gmail.com"
+                        firstName="name"
+                        image="/content/dam/macrosoft/icons/Link-List-Icons-Xbox-Games-Consoles.jpg"
+                        imageAltText="profilePic"
+                        lastName="lastname"
+                        maritalStatus="married"
+                        mobileNumber="987654321"
+                        numberOfBacklogs="10"
+                        passedOutDate="{Date}2026-02-17T00:00:00.000+05:30"
+                        percentage="95"
+                        spouseAge="23"
+                        spouseName="spouseName"
+                        spouseOccupation="job"
+                        status="true"
+                        textIsRich="true">
+                        <productList jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                productTitle="het"/>
+                        </productList>
+                    </dynamic_two_tabs>
+                </container>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>

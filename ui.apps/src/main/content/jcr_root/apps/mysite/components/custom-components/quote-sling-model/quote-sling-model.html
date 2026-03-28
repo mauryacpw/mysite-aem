@@ -1,0 +1,29 @@
+<sly data-sly-use.quoteModel="com.mysite.core.models.QuoteModel"></sly>
+<style>
+    table, th, td {
+        border: 2px solid black;
+        border-collapse: collapse;
+    }
+    </style>
+
+
+<table >
+    <tr >
+        <th >quote</th>
+        <th >author</th>
+        <th >category</th>
+        <th >header</th>
+    </tr>
+
+        <sly data-sly-list.row="${quoteModel.quotes}">
+            <tr >
+            <td >${row.q}</td>
+            <td >${row.a}</td>
+            <td >${row.c}</td>
+            <td >${row.h}</td>
+            </tr>
+        </sly>
+    
+
+
+    </sly>

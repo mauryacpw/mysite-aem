@@ -1,0 +1,10 @@
+<sly data-sly-use.personal="/apps/mysite/components/dynamic-two-tabs/personalDetail.html" />
+<sly data-sly-use.education="/apps/mysite/components/dynamic-two-tabs/educationalDetails.html" />
+
+<div data-sly-test="${properties.detailsType == 'personalDetails'}">
+    <sly data-sly-call="${personal.personalDetails}" />
+</div>
+
+<div data-sly-test="${properties.detailsType != 'personalDetails'}">
+    <sly data-sly-call="${education.educationDetails}" />
+</div>

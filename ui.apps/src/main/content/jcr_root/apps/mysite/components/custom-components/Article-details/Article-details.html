@@ -1,0 +1,10 @@
+<sly data-sly-use.articleDetails="com.mysite.core.models.ArticleDetailModel"></sly>
+<div>
+    <h2>Article Details:</h2>
+
+    <img src="${articleDetails.articleImage}" alt="${articleDetails.articleTitle}"></img>
+    <p>Title: ${articleDetails.articleTitle}</p>
+    <p>Description: ${articleDetails.articleDescription}</p>
+    <p>Date: ${articleDetails.articleDate}</p>
+
+</div>

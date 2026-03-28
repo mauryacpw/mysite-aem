@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Article configuration"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <article-title
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                fieldLabel="Article Title"
+                name="./articleTitle"/>
+            <article-desc
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                fieldLabel="Article Desc"
+                name="./articleDesc"/>
+            <article-image
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                fieldLabel="Article image"
+                name="./articleImage"/>
+            <article-status
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                checked="true"
+                name="./status"
+                text="status"
+                unchecked="false"
+                value="{Boolean}true"/>
+            <article-type
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                fieldLabel="Article Type"
+                name="./articleType">
+                <items jcr:primaryType="nt:unstructured">
+                    <h1
+                        jcr:primaryType="nt:unstructured"
+                        text="L1"
+                        value="10"/>
+                    <h2
+                        jcr:primaryType="nt:unstructured"
+                        text="L2"
+                        value="20&#xa;"/>
+                </items>
+            </article-type>
+            <article-expiry
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
+                fieldLabel="Article Expiry"
+                name="./articleExpiry"/>
+            <article-label
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                fieldLabel="Article Label">
+                <field
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                    name="./articleLabel"/>
+            </article-label>
+            <related-article
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                composite="{Boolean}true"
+                fieldLabel="Realted-articles">
+                <field
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                    name="./articleTitle">
+                    <items jcr:primaryType="nt:unstructured">
+                        <article-title
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="ArticleTitle"
+                            name="./articleTitle"/>
+                        <article-path
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                            fieldLabel="Article Path"
+                            name="./articlePath"/>
+                    </items>
+                </field>
+            </related-article>
+        </items>
+    </content>
+</jcr:root>

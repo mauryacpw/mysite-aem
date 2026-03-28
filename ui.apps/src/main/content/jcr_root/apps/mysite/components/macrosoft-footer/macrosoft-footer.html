@@ -1,0 +1,30 @@
+<div class="cmp-footer">
+    <div class="cmp-footer__container">
+
+        <sly data-sly-list.sections="${resource.getChildren}">
+            <div class="cmp-footer__section">
+
+                <sly data-sly-list.linkList="${sections.getChildren}">
+                    <div class="footer-section-linkList">
+                        <h3 class="cmp-footer__section-title">
+                        ${linkList.sectionTitle}
+                    </h3>
+
+                    <ul class="cmp-footer__link-list" data-sly-list.link="${linkList.getChildren}">
+                        <li class="cmp-footer__link-item" data-sly-list.item="${link.getChildren}">
+                            <a class="cmp-footer__link"
+                               href="${item.pagePath}"
+                               title="${item.pageTitle}">
+                                ${item.pageTitle}
+                            </a>
+                        </li>
+                    </ul>
+                    </div>
+
+                </sly>
+
+            </div>
+        </sly>
+
+    </div>
+</div>

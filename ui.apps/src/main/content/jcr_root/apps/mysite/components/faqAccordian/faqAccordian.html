@@ -1,0 +1,26 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"/>
+<sly data-sly-call="${clientlib.js @ categories='mysite.accordion'}"/>
+
+<div class="faq-accordion">
+
+    <div class="faq-item">
+        <button class="faq-question">
+            What is AEM?
+            <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+            Adobe Experience Manager is a CMS platform used to build websites and apps.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">
+            What is a component in AEM?
+            <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+            A component is a reusable building block for content and functionality.
+        </div>
+    </div>
+
+</div>

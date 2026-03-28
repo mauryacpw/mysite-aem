@@ -1,0 +1,63 @@
+<sly data-sly-use.generalDetails="com.mysite.core.models.ProductDetailImpl"></sly>
+
+<sly data-sly-test="${generalDetails.status}">
+    <div class="product-details">
+        <h2>Product General Title: ${generalDetails.title}</h2>
+        <p>Product General Description: ${generalDetails.description @context="html"}</p>
+        <p>Product General Category: ${generalDetails.category}</p>
+    </div>
+    <h2>Product List</h2>
+
+    <div class="product-cards">
+        <sly data-sly-test="${generalDetails.showCF}">
+            <sly data-sly-test="${generalDetails.contentFragmentProducts.empty}">
+                <h1> No Products Available</h1>
+            </sly>
+            <sly data-sly-test="${!generalDetails.contentFragmentProducts.empty}">
+                <ul data-sly-list.contentFragment="${generalDetails.contentFragmentProducts}">
+                    <li data-sly-test="${!contentFragment.productExpired}">
+
+                        <img src="${contentFragment.productImage}" alt="${contentFragment.productTitle} Image" />
+                        <h2>Product Title: ${contentFragment.productTitle}</h2>
+                        <p>Product Price: ${contentFragment.productPrice}</p>
+                        <p>Product Color: ${contentFragment.productColor}</p>
+                        <p>Product Expiry Date: ${contentFragment.productExpiry}</p>
+                        <p>Product Tag:</p>
+                        <ul>
+                            <li data-sly-list.tags="${contentFragment.productTag}">
+                                ${tags}
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </sly>
+        </sly>
+
+        <sly data-sly-test="${!generalDetails.showCF}">
+            <sly data-sly-test="${generalDetails.productCards.empty}">
+                <h1> No Products Available</h1>
+            </sly>
+            <sly data-sly-test="${!generalDetails.productCards.empty}">
+                <ul data-sly-list.productCard="${generalDetails.productCards}">
+                    <li data-sly-test="${!productCard.productExpired}">
+
+                        <img src="${productCard.productImage}" alt="${productCard.productTitle} Image" />
+                        <h2>Product Title: ${productCard.productTitle}</h2>
+                        <p>Product Price: ${productCard.productPrice}</p>
+                        <p>Product Color: ${productCard.productColor}</p>
+                        <p>Product Expiry Date: ${productCard.productExpiry}</p>
+                        <p>Product Tag:</p>
+                        <ul>
+                            <li data-sly-list.tags="${productCard.productTag}">
+                                ${tags}
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </sly>
+        </sly>
+</sly>
+</div>
+</sly>

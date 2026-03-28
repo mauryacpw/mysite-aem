@@ -1,0 +1,6 @@
+{
+  "scripts":[
+    "create service user npservice",
+    "set ACL for npservice\r\nallow jcr:all on /\r\nend"
+  ]
+}

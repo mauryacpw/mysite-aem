@@ -1,0 +1,17 @@
+{
+  "config": {
+    "rootPath": "/content/articles",
+    "maxArticles": 2,
+    "limitedMaxArticles": 1
+  },
+  "pages": {
+    "page1": {
+      "path": "/a1",
+      "date": 1000
+    },
+    "page2": {
+      "path": "/a2",
+      "date": 2000
+    }
+  }
+}

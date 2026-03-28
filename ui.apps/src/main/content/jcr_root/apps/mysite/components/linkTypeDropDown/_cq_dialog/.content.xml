@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Link Dropdown "
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/container"
+                name="./linkType">
+                <items jcr:primaryType="nt:unstructured">
+                    <dropDown
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/select"
+                        class="cq-dialog-dropdown-showhide"
+                        cq-dialog-dropdown-showhide-target=".test-options-showhide-target"
+                        fieldLabel="Link Type"
+                        name="./linkType">
+                        <items jcr:primaryType="nt:unstructured">
+                            <internalLink
+                                jcr:primaryType="nt:unstructured"
+                                text="Internal Link"
+                                value="internalLink"/>
+                            <externalLink
+                                jcr:primaryType="nt:unstructured"
+                                text="External Link"
+                                value="externalLink"/>
+                        </items>
+                    </dropDown>
+                    <internalLinkGroup
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container"
+                        class="hide test-options-showhide-target"
+                        showhidetargetvalue="internalLink">
+                        <items jcr:primaryType="nt:unstructured">
+                            <heading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/heading"
+                                class="coral-Heading coral-Heading--4"
+                                level="\{Long}4"
+                                text="Internal Link"/>
+                            <well
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/layouts/well">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/layouts/well"/>
+                                <items jcr:primaryType="nt:unstructured">
+                                    <internalLink
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        fieldLabel="Internal URL"
+                                        name="./internalUrl"/>
+                                </items>
+                            </well>
+                        </items>
+                    </internalLinkGroup>
+                    <externalLinkGroup
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container"
+                        class="hide test-options-showhide-target foundation-layout-util-vmargin"
+                        showhidetargetvalue="externalLink">
+                        <items jcr:primaryType="nt:unstructured">
+                            <heading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/heading"
+                                class="coral-Heading coral-Heading--4"
+                                level="\{Long}4"
+                                text="External Link"/>
+                            <well
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/layouts/well">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/layouts/well"/>
+                                <items jcr:primaryType="nt:unstructured">
+                                    <externalLink
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                        fieldLabel="External Link"
+                                        name="./externalUrl"/>
+                                </items>
+                            </well>
+                        </items>
+                    </externalLinkGroup>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

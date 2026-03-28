@@ -1,0 +1,35 @@
+<sly data-sly-template.personalDetails>
+    <div data-sly-test="${properties.firstName}">
+
+        <p>${properties.firstName}</p>
+        <p>${properties.lastName}</p>
+        <p>${properties.gender}</p>
+        <p>${properties.age}</p>
+
+        <p>${'yyyy-MM-dd' @ format=properties.dob}</p>
+        
+
+        <sly data-sly-test="${properties.image}">
+            <img src="${properties.image}" alt="${properties.imageAltText}" />
+        </sly>
+
+        <p>${properties.mobileNumber}</p>
+        <p>${properties.email}</p>
+        <p>${properties.contactMode}</p>
+
+        <div>${properties.address @ context='html'}</div>
+
+        <p>${properties.maritalStatus}</p>
+
+        <sly data-sly-test="${properties.maritalStatus == 'married'}">
+            <p>${properties.spouseName}</p>
+            <p>${properties.spouseAge}</p>
+            <p>${properties.spouseOccupation}</p>
+        </sly>
+
+
+    </div>
+
+</sly>
+
+<sly data-sly-call="${personalDetails}" />

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-02-25T11:09:02.064+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/mysite/settings/wcm/templates/artical-template"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="test page"
+        sling:resourceType="mysite/components/article-page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="mysite/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="mysite/components/container"
+                layout="responsiveGrid">
+                <contentfragment_811442693
+                    jcr:created="{Date}2026-02-25T09:50:51.908+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2026-02-25T09:51:21.953+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="mysite/components/contentfragment"
+                    displayMode="multi"
+                    fragmentPath="/content/dam/mysite/content-fragments/cfragment-demo"
+                    paragraphScope="all"
+                    text="CFragment demo Field Label test field label Field Label 4 Test Label checkboxes Field option2 JSON content { &quot;name&quot;:&quot;testName&quot;, &quot;course&quot;:&quot;CF vs XF&quot; }"
+                    variationName="master"/>
+                <contentfragment
+                    jcr:created="{Date}2026-02-25T11:07:11.659+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2026-02-25T11:09:02.034+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="mysite/components/contentfragment"
+                    displayMode="multi"
+                    fragmentPath="/content/dam/mysite/content-fragments/cfragment-demo"
+                    paragraphScope="all"
+                    text="CFragment demo Field Label test field label Field Label 4 Test Label checkboxes Field option2 JSON content { &quot;name&quot;:&quot;testName&quot;, &quot;course&quot;:&quot;CF vs XF&quot; }"
+                    variationName="master"/>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>

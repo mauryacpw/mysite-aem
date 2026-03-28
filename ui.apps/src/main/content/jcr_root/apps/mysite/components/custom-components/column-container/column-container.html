@@ -1,0 +1,50 @@
+<sly data-sly-test="${properties.columnCount == '2'}">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <sly data-sly-resource="${'column-1' @ resourceType='/apps/mysite/components/container'}" />
+            </div>
+            <div class="col-6">
+                <sly data-sly-resource="${'column-2' @ resourceType='/apps/mysite/components/container'}" />
+            </div>
+        </div>
+    </div>
+</sly>
+
+
+
+
+<sly data-sly-test="${properties.columnCount == '3'}">
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <sly data-sly-resource="${'column-1' @ resourceType='/apps/mysite/components/container'}" />
+            </div>
+            <div class="col-4">
+                <sly data-sly-resource="${'column-2' @ resourceType='/apps/mysite/components/container'}" />
+            </div>
+            <div class="col-4">
+                <sly data-sly-resource="${'column-3' @ resourceType='/apps/mysite/components/container'}" />
+            </div>
+        </div>
+    </div>
+</sly>
+
+<sly data-sly-test="${properties.columnCount == '4'}">
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <sly data-sly-resource="${'column-1' @ resourceType='/apps/mysite/components/container'}" />
+            </div>
+            <div class="col-3">
+                <sly data-sly-resource="${'column-2' @ resourceType='/apps/mysite/components/container'}" />
+            </div>
+            <div class="col-3">
+                <sly data-sly-resource="${'column-3' @ resourceType='/apps/mysite/components/container'}" />
+            </div>
+            <div class="col-3">
+                <sly data-sly-resource="${'column-4' @ resourceType='/apps/mysite/components/container'}" />
+            </div>
+        </div>
+    </div>
+</sly>

@@ -1,0 +1,10 @@
+<sly data-sly-use.model="com.mysite.core.models.WeatherModel"/>
+
+<sly data-sly-list.item="${model.currentWeatherList}">
+    <p>Time: ${item.time}</p>
+    <p>Temperature: ${item.temperature}</p>
+    <p>Wind Speed: ${item.windspeed}</p>
+    <p>Wind Direction: ${item.winddirection}</p>
+    <p>Is Day: ${item.is_day}</p>
+    <p>Weather Code: ${item.weathercode}</p>
+</sly>
