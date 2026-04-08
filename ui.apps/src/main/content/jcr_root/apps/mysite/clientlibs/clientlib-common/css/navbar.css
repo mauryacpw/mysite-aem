@@ -199,6 +199,7 @@
 .outer-container.show {
   display: flex;
   z-index: 1000;
+  
 }
 
 .login-box {
