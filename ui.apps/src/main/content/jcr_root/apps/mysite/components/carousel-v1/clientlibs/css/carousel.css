@@ -1,0 +1,340 @@
+.cmp-custom-carousel {
+  position: relative;
+  width: 100%;
+  height: 500px; /* Fixed height requested by user */
+  margin: 0 auto;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+.cmp-custom-carousel__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.cmp-custom-carousel__item {
+  min-width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.cmp-custom-carousel__item img,
+.cmp-custom-carousel__item video,
+.cmp-custom-carousel__item svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Caption Container */
+.cmp-custom-carousel__container {
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  right: 10%;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+  text-align: center;
+  z-index: 2;
+}
+
+.cmp-custom-carousel__container h1 {
+  margin: 0 0 10px 0;
+  font-size: 2.5rem;
+}
+
+.cmp-custom-carousel__container p {
+  font-size: 1.2rem;
+  margin: 0 0 20px 0;
+}
+
+.cmp-custom-carousel__btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.cmp-custom-carousel__btn:hover {
+  background-color: #0056b3;
+}
+
+/* Indicators */
+.cmp-custom-carousel__indicators {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.cmp-custom-carousel__indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  padding: 0;
+}
+
+.cmp-custom-carousel__indicator--active {
+  background-color: #fff;
+}
+
+/* Controls */
+.cmp-custom-carousel__control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 3px;
+}
+
+.cmp-custom-carousel__control:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.cmp-custom-carousel__control--prev {
+  left: 10px;
+}
+
+.cmp-custom-carousel__control--next {
+  right: 10px;
+}
+
+/* Style System alignments mapping example */
+
+.align-left {
+  text-align: left;
+}
+.align-right {
+  text-align: right;
+}
+/* Default Styles */
+.bg-light {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  text-shadow: none;
+}
+
+.bg-dark {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.bg-custom {
+  color: rgb(255, 255, 255);
+  background-color: red;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Image Alignment */
+.image-left {
+  object-position: left center;
+}
+
+.image-right {
+  object-position: right center;
+}
+
+
+/* ==========================================================================
+   CAROUSEL V2 - BASE STYLES
+   ========================================================================== */
+.cmp-custom-carousel {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+.cmp-custom-carousel__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.cmp-custom-carousel__item {
+  min-width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+  background-color: transparent; /* Default */
+}
+
+/* New Base Media Wrapper (Acts as a full background by default) */
+.cmp-custom-carousel__media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.cmp-custom-carousel__media img,
+.cmp-custom-carousel__media video,
+.cmp-custom-carousel__media svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Caption Container Base (Floating Center Default) */
+.cmp-custom-carousel__container {
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  right: 10%;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+  text-align: center;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.cmp-custom-carousel__container h1 {
+  margin: 0 0 10px 0;
+  font-size: 2.5rem;
+}
+
+.cmp-custom-carousel__container p {
+  font-size: 1.2rem;
+  margin: 0 0 20px 0;
+}
+
+.cmp-custom-carousel__btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.cmp-custom-carousel__btn:hover {
+  background-color: #0056b3;
+}
+
+/* Controls & Indicators Base */
+.cmp-custom-carousel__indicators {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.cmp-custom-carousel__indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  padding: 0;
+}
+
+.cmp-custom-carousel__indicator--active {
+  background-color: #fff;
+}
+
+.cmp-custom-carousel__control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 3px;
+}
+
+.cmp-custom-carousel__control:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.cmp-custom-carousel__control--prev { left: 10px; }
+.cmp-custom-carousel__control--next { right: 10px; }
+
+/* ==========================================================================
+   CAROUSEL V2 - AEM STYLE SYSTEM MODIFIERS
+   ========================================================================== */
+
+/* 1. BACKGROUND COLORS (Applied to the whole slide) */
+.bg-light .cmp-carousel-v2 .cmp-custom-carousel__item { background-color: #f8f9fa; }
+.bg-dark .cmp-carousel-v2 .cmp-custom-carousel__item { background-color: #222222; }
+.bg-custom .cmp-carousel-v2 .cmp-custom-carousel__item { background-color: red; } /* Your red background */
+
+/* Remove text-shadow for light background to ensure readability */
+.bg-light .cmp-carousel-v2 .cmp-custom-carousel__container {
+  color: #333;
+  text-shadow: none;
+}
+
+/* 2. SPLIT LAYOUT TRIGGER (When Alignment is chosen) */
+.align-left .cmp-carousel-v2 .cmp-custom-carousel__item,
+.align-right .cmp-carousel-v2 .cmp-custom-carousel__item {
+  display: flex;
+  align-items: center; /* Vertically centers the text beside the image */
+}
+
+/* Turn off absolute positioning so they sit side-by-side */
+.align-left .cmp-carousel-v2 .cmp-custom-carousel__media,
+.align-right .cmp-carousel-v2 .cmp-custom-carousel__media {
+  position: relative; 
+  width: 50%;
+  height: 100%;
+}
+
+.align-left .cmp-carousel-v2 .cmp-custom-carousel__container,
+.align-right .cmp-carousel-v2 .cmp-custom-carousel__container {
+  position: relative;
+  width: 50%;
+  padding: 40px;
+  left: auto; right: auto; bottom: auto; /* Reset floating coordinates */
+}
+
+/* 3. ALIGNMENT DIRECTION */
+/* Image Left, Text Right */
+.align-left .cmp-carousel-v2 .cmp-custom-carousel__item {
+  flex-direction: row;
+}
+
+/* Image Right, Text Left */
+.align-right .cmp-carousel-v2 .cmp-custom-carousel__item {
+  flex-direction: row-reverse;
+}

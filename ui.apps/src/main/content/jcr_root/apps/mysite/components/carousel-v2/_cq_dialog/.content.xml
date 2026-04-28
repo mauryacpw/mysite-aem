@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Carousel-v2"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <carousels
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                composite="{Boolean}true"
+                fieldLabel="Carousel">
+                <field
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                    name="./carouselItems">
+                    <items jcr:primaryType="nt:unstructured">
+                        <accordion
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/accordion">
+                            <items jcr:primaryType="nt:unstructured">
+                                <carousel
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Carousel"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <select
+                                            granite:class="cq-dialog-dropdown-showhide"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                            fieldLabel="Media Type"
+                                            name="./mediaType">
+                                            <granite:data
+                                                jcr:primaryType="nt:unstructured"
+                                                cq-dialog-dropdown-showhide-target=".media-type-showhide-target"/>
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <image
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Image"
+                                                    value="image"/>
+                                                <video
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Video"
+                                                    value="video"/>
+                                            </items>
+                                        </select>
+                                        <image
+                                            granite:class="hide media-type-showhide-target"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                            emptyText="Select Image Path"
+                                            name="./imagePath"
+                                            rootPath="/content/dam/mysite">
+                                            <granite:data
+                                                jcr:primaryType="nt:unstructured"
+                                                showhidetargetvalue="image"/>
+                                        </image>
+                                        <video
+                                            granite:class="hide media-type-showhide-target"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                            emptyText="Select Video Path"
+                                            name="./videoPath"
+                                            rootPath="/content/dam/mysite">
+                                            <granite:data
+                                                jcr:primaryType="nt:unstructured"
+                                                showhidetargetvalue="video"/>
+                                        </video>
+                                    </items>
+                                </carousel>
+                            </items>
+                        </accordion>
+                    </items>
+                </field>
+            </carousels>
+        </items>
+    </content>
+</jcr:root>
